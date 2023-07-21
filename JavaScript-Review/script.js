@@ -199,3 +199,26 @@ const pageRange = pages > 1000 ? "over a thousand" : "less than thousand";
 pageRange;
 
 console.log(`The book has ${pageRange} pages.`);
+
+console.log(true && "Some String");
+console.log(false && "Some String");
+console.log(hasMovieAdaptation && "This book is a movie");
+
+// falsy 0, '', undefined, null
+console.log("jonas" && "Some String");
+console.log(0 && "Some String");
+
+console.log(true || "Some String");
+console.log(false || "Some String");
+
+console.log(book.translations.spanish);
+
+const spanishTranslation = book.translations.spanish || "Not Translated";
+spanishTranslation;
+
+console.log(book.reviews.librarything.reviewsCount);
+const countWrong = book.reviews.librarything.reviewsCount || "no data";
+console.log(countWrong);
+
+const count = book.reviews.librarything.reviewsCount ?? "no data";
+count;
