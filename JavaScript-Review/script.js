@@ -232,6 +232,7 @@ function getTotalReviewCount(book) {
 
 console.log(getTotalReviewCount(book));
 */
+/*
 const books = getBooks();
 books;
 
@@ -299,3 +300,10 @@ const bookAfterUpdate = booksAfterDelete.map((book) =>
   book.id === 1 ? {} : book
 );
 bookAfterUpdate;
+*/
+
+fetch("https://jsonplaceholder.typicode.com/todos")
+  .then((res) => res.json())
+  .then((data) => console.log(data));
+
+console.log("jonas");
