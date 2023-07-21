@@ -145,7 +145,7 @@ function getBook(id) {
 
 const books = getBooks();
 
-const book = getBook(2);
+const book = getBook(1);
 
 // const title = book.title;
 // const author = book.author;
@@ -158,6 +158,22 @@ console.log(title, author, genres);
 // const primaryGenres = genres[0];
 // const secondaryGenres = genres[1];
 
-const [primaryGenres, secondaryGenres] = genres;
+const [primaryGenres, secondaryGenres, ...otherGenres] = genres;
 
-console.log(primaryGenres, secondaryGenres);
+console.log(primaryGenres, secondaryGenres, otherGenres);
+
+const newGenres = ["epic fantasy", ...genres];
+
+newGenres;
+
+console.log(newGenres[1]);
+
+const updatedBook = {
+  ...book,
+  // adding a nre property
+  moviePublicationDate: "2001-12-19",
+  //overwriting an existing property
+  pages: 1210,
+};
+
+updatedBook;
