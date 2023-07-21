@@ -255,3 +255,14 @@ const essentialData = books.map((book) => ({
 }));
 
 essentialData;
+
+const longBook = books
+  .filter((book) => book.pages > 500)
+  .filter((book) => book.hasMovieAdaptation);
+
+longBook;
+
+const advantureBooks = books
+  .filter((book) => book.genres.includes("adventure"))
+  .map((book) => book.title);
+advantureBooks;
